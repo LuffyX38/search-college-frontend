@@ -177,7 +177,7 @@ function loadCourses(page) {
       document.getElementById("loadMreBtn").style.display = "block";
     })
     .catch((err) => {
-      console.error("Fetch error:", err);
+      // console.error("Fetch error:", err);
     });
 }
 
