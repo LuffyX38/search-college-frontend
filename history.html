@@ -117,7 +117,7 @@
         )
           .then((res) => res.json())
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (currentPage == 0 && (res.data.length == 0 || !res)) {
               cardsInside.innerHTML = `<h1>${"No results found."}</h1>`;
               pagination.style.display = "none";
@@ -153,7 +153,9 @@
               })
               .join("");
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            // console.log(err);
+          });
       }
 
       function checkAuthAndRenderProfile() {
@@ -198,7 +200,7 @@
                       }
                     })
                     .catch((err) => {
-                      console.log(err);
+                      // console.log(err);
                     });
                 });
             } else {
@@ -214,7 +216,7 @@
             }
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
           });
       }
 

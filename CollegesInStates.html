@@ -155,7 +155,7 @@
                       }
                     })
                     .catch((err) => {
-                      console.log(err);
+                      // console.log(err);
                     });
                 });
             } else {
@@ -170,7 +170,7 @@
             }
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
           });
       }
 
@@ -208,7 +208,7 @@
           .then((response) => response.json())
           .then((data) => {
             // Process the data and update the UI
-            console.log(data);
+            // console.log(data);
 
             if (currentPage != 0 && !data.data) {
               document.getElementById("nextBtn").disabled = true;

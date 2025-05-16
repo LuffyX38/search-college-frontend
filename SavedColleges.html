@@ -237,7 +237,7 @@
                       }
                     })
                     .catch((err) => {
-                      console.log(err);
+                      // console.log(err);
                     });
                 });
             } else {
@@ -255,7 +255,7 @@
             }
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
           });
       }
 
@@ -263,7 +263,7 @@
 
       const nextBtn = () => {
         currentPage++;
-        console.log("pressed next", currentPage); 
+        // console.log("pressed next", currentPage); 
         fetchedCollegeData(
           `https://search-college-backend.vercel.app/api/colleges/addToBucket/view?page=${currentPage}`
         );
@@ -338,7 +338,9 @@
            
 
         })
-        .catch(err => console.log(err));
+        .catch(err =>{
+          // console.log(err)
+        });
         document.getElementById("dataHere").innerHTML = "";
         
       };
@@ -349,20 +351,20 @@
       const deleteCollege = (id) => {
   const confirmed = window.confirm("Are you sure you want to delete this college?");
   if (confirmed) {
-    console.log("deleted", id);
+    // console.log("deleted", id);
 
     fetch(`https://search-college-backend.vercel.app/api/colleges/addToBucket/remove/${id}`,{
       method:"DELETE",
       credentials:"include"
     }).then(res => res.json())
       .then(res => {
-        console.log(res);
+        // console.log(res);
         if(res.statusCode === 200){
           const element = document.getElementById(id);
           if (element) {
                 element.remove();
                 const hasContent = document.getElementById('dataHere').children.length;
-                console.log(hasContent);
+                // console.log(hasContent);
                 if(hasContent === 0){
                   fetchedCollegeData(`https://search-college-backend.vercel.app/api/colleges/addToBucket/view?page=${currentPage}`);
                 }
@@ -370,12 +372,14 @@
             }
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        // console.log(err)
+      });
 
      
 
   } else {
-    console.log("not deleted");
+    // console.log("not deleted");
   }
 };
 

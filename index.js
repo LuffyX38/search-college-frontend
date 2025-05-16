@@ -41,7 +41,7 @@ function checkAuthAndRenderProfile() {
               }
             })
             .catch((err) => {
-              console.log(err);
+              // console.log(err);
             });
         });
       } else {
@@ -57,7 +57,7 @@ function checkAuthAndRenderProfile() {
       }
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
     });
 }
 
@@ -110,7 +110,9 @@ const mostVisitedColleges = () => {
         document.getElementById("mostVisitedColleges").appendChild(collegeLink);
       });
     })
-    .catch((err) => console.log(err))
+    .catch((err) => {
+      // console.log(err);
+    })
     .finally(() => {
       document.getElementById("loadingScreen").style.display = "none";
     });
@@ -136,7 +138,7 @@ function loadCourses(page) {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log("Page:", page, res);
+      // console.log("Page:", page, res);
 
       if (page > 1) {
         document.getElementById("goBack").style.display = "inline-block";

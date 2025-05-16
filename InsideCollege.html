@@ -218,7 +218,7 @@
             if (res.statusCode === 200) {
               alert("College saved successfully!");
             } else {
-              console.log(res);
+              // console.log(res);
               const message =
                 res.message === "Unauthorized request"
                   ? "Please log in to save colleges."
@@ -317,7 +317,9 @@
           }
         )
           .then((res) => res.json())
-          .then((res) => console.log(res))
+          .then((res) => {
+            // console.log(res)
+          })
           .catch((err) => console.error(err));
       };
     </script>
