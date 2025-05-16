@@ -204,6 +204,9 @@
 
       const saveCollege = () => {
         // console.log("Saving college...", collegeId);
+        document.getElementById("saveCollegeBtn").innerHTML =
+          '<i class="fas fa-bookmark me-2"></i> College Saved';
+        document.getElementById("saveCollegeBtn").disabled = true;
         fetch(
           `https://search-college-backend.vercel.app/api/colleges/addToBucket/id/${collegeId}`,
           {
