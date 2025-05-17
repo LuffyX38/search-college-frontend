@@ -220,7 +220,7 @@
           .then((res) => res.json())
           .then((res) => {
             // console.log(res);
-            if (res.statusCode === 200) {
+            if (res.statusCode === 201) {
               alert("College saved successfully!");
             } else {
               // console.log(res);
@@ -231,7 +231,7 @@
               alert(message);
        
             }
-            if(res.statusCode !== 200){
+            if(res.statusCode !== 201){
               document.getElementById("saveCollegeBtn").innerHTML =
           '<i class="fas fa-bookmark me-2"></i> Save college';
         document.getElementById("saveCollegeBtn").disabled = false;
