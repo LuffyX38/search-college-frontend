@@ -229,9 +229,12 @@
                   ? "Please log in to save colleges."
                   : res.message;
               alert(message);
-        //       document.getElementById("saveCollegeBtn").innerHTML =
-        //   '<i class="fas fa-bookmark me-2"></i> Save college';
-        // document.getElementById("saveCollegeBtn").disabled = false;
+       
+            }
+            if(res.statusCode !== 200){
+              document.getElementById("saveCollegeBtn").innerHTML =
+          '<i class="fas fa-bookmark me-2"></i> Save college';
+        document.getElementById("saveCollegeBtn").disabled = false;
             }
             saveCollegeState();
           })
