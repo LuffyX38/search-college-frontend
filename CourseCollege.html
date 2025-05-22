@@ -219,6 +219,7 @@
               document.getElementById(
                 "cardsInside"
               ).innerHTML = `<h1>No college found</h1>`;
+              return;
             }
 
             if (currentPage != 0 && (!data.data || data.data.length === 0)) {
