@@ -212,6 +212,14 @@
           .then((data) => {
             // Process the data and update the UI
             // console.log(data);
+            if (currentPage === 0 && (!data.data || data.data.length === 0)) {
+              document.getElementById("nextBtn").disabled = true;
+              document.getElementById("prevBtn").disabled = true;
+              document.getElementById("firstBtn").disabled = true;
+              document.getElementById(
+                "cardsInside"
+              ).innerHTML = `<h1>No college found</h1>`;
+            }
 
             if (currentPage != 0 && (!data.data || data.data.length === 0)) {
               document.getElementById("nextBtn").disabled = true;
