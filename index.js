@@ -148,7 +148,7 @@ function loadCourses(page) {
 
       res.data.forEach((item) => {
         const courseName = item._id;
-        if (!courseName) return;
+        if (!courseName || courseName === "N/A") return;
 
         const col = document.createElement("div");
         col.className = "col-auto";
